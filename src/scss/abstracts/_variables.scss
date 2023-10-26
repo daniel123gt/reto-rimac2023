@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+$xs: 320px;
+$sm: 768px;
+$md: 1120px;
+
+$grey-100: #03050F;
+$grey-80: #2B304E;
+$grey-60: #5E6488;
+$grey-30: #CCD1EE;
+$grey-10: #F8F9FF;
+
+$neutrals-n-700: #141938;
+$neutrals-n-600: #7981B2;
+$neutrals-n-500: #A9AFD9;
+$neutrals-n-400: #D7DBF5;
+$neutrals-n-200: #EDEFFC;
+$neutrals-n-100: #FAFBFF;
+
+$feedback-success-300: #389E0D;
+
+$blue-berry-b-600: #4F4FFF;
+
+$red-rimacr-500: #FF1C44;
+
+:root{
+    /*fonts*/
+    --font-lato: 'Lato', sans-serif;
+
+}

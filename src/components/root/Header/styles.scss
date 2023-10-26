@@ -1,0 +1,43 @@
+@import '../../../scss/abstracts/variables';
+
+.header{
+    background-color: #ffffff00;
+    &__content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+    
+        img{
+            width: 74px;
+        }
+        &__right{
+            display: flex;
+            gap: 16px;
+            justify-content: space-between;
+            align-items: center;
+            span{
+                display: none;
+                font-size: 12px;
+                font-weight: 500;
+            }
+            @media (min-width: $md){
+                span{
+                    display: block;
+                }
+            }
+            a{
+                font-size: 18px;
+                font-weight: 700;
+                letter-spacing: 0.4px;
+                color: $grey-100;
+                display: flex;
+                justify-content: space-between;
+                align-items: end;
+                gap: 8px;
+            }
+        }
+    }
+    
+}

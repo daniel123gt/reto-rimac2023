@@ -1,0 +1,12 @@
+@import '../../../scss/abstracts/variables';
+.chip{
+    
+    span{
+        padding: 4px 8px;
+        border-radius: 4px;
+        background-image: linear-gradient(86deg, #00F4E2 0%, #00FF7F 100%);
+        color: $grey-100;
+        font-size: 14px;
+        font-weight: 700;
+    }
+}

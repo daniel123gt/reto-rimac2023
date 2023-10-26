@@ -1,0 +1,37 @@
+@import '../abstracts/_variables.scss';
+html, body{
+    font-family: var(--font-lato)
+}
+
+.container-rimac{
+    width: $md;
+    margin: 0 auto;
+}
+
+
+#root{
+    position: relative;
+    min-height: 100vh;
+}
+
+.content-wrap{
+    padding-bottom: 170px;
+}
+
+@media (max-width: $md) {
+    .container-rimac{
+        width: 100%;
+        padding: 0 1.5rem;
+    }
+}
+
+@media (min-width: $md) {
+    .grid-rimac{
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        grid-auto-flow: column;
+        gap: 32px;
+        
+    }
+ 
+}

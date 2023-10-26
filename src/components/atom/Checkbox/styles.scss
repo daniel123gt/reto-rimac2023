@@ -1,0 +1,57 @@
+@import '../../../scss/abstracts/variables';
+
+.checkbox{
+    display: block;
+    position: relative;
+    padding-left: 32px;
+    margin-bottom: 12px;
+  cursor: pointer;
+    cursor: pointer;
+    input{
+        position: absolute;
+        opacity: 0;
+        height: 0;
+        width: 0;
+    }
+    &__check{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background-color: $grey-10;
+        border-radius: 4px;
+        border: 1px solid $grey-100;
+    }
+    input[type="checkbox"]:checked ~ &__check{
+        background-color: $grey-100;
+    }
+    label{
+        cursor: pointer;
+        margin-right: 12px;
+        font-size: 14px;
+        font-weight: 400;
+        color: $grey-100;
+    }
+    &__check:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+      
+      input:checked ~ &__check:after {
+        display: block;
+      }
+      
+      &__check:after {
+        left: 6px;
+        top: 1px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+}
