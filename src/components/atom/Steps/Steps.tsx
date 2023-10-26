@@ -9,6 +9,8 @@ interface Props {
 
 }
 const Steps = (props: Props): JSX.Element => {
+  const stepsBar = props.steps
+  console.log(stepsBar)
   return (
     <div className='steps '>
       <div className='steps__content container-rimac'>

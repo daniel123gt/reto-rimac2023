@@ -21,7 +21,11 @@ const Form = (props: Props): JSX.Element => {
     const data = await response.json()
     console.log(data)
     localStorage.setItem('user', JSON.stringify(data))
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     localStorage.setItem('userdni', formel?.current?.querySelector('#doc').value)
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     localStorage.setItem('usertlf', formel?.current?.querySelector('#tlf').value)
     navigate('/planes')
   }
@@ -30,7 +34,7 @@ const Form = (props: Props): JSX.Element => {
     await getUser()
   }
   return (
-    <form ref={formel} className='form' onSubmit={(e) => { handlSubmit(e) }}>
+    <form ref={formel} className='form' onSubmit={(e) => { void handlSubmit(e) }}>
             <legend>{props.legend}</legend>
         <fieldset>
             <InputSelect name='doc' label='Número de documento' type='text' required/>

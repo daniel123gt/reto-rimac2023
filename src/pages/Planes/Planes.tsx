@@ -6,7 +6,6 @@ import { type ListOfSteps } from '../../models/types/types'
 
 import AddUser from '../../assets/AddUser.svg'
 import Protection from '../../assets/Protection.svg'
-import Hospital from '../../assets/HospitalLight.svg'
 import Home from '../../assets/HomeLight.svg'
 
 import HospitalIcon from '../../components/icons/Hospital'
@@ -18,7 +17,7 @@ import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 
 import './styles.scss'
-import { useEffect, useState } from 'react'
+import { type JSXElementConstructor, type Key, type ReactElement, type ReactNode, type ReactPortal, useEffect, useState } from 'react'
 
 const responsive = {
   superLargeDesktop: {
@@ -45,20 +44,19 @@ const listSteps: ListOfSteps = [{
 }]
 
 const Planes: React.FC = () => {
-  const [planes, setPlanes] = useState([])
+  const [planes, setPlanes] = useState<any[]>([])
   const getPlanes = async (): Promise<void> => {
     const response = await fetch('https://rimac-front-end-challenge.netlify.app/api/plans.json', {
       method: 'GET'
     })
     const data = await response.json()
     setPlanes(data.list)
-    console.log(planes.list)
   }
-  const onChangePlan = (e: any): void => {
+  // const onChangePlan = (e: any): void => {
 
-  }
+  // }
   useEffect(() => {
-    getPlanes()
+    void getPlanes()
   }, [])
 
   return (
@@ -116,7 +114,7 @@ const Planes: React.FC = () => {
                 </div>
                 <div className='planes__cardlist__body'>
                   <ul>
-                    {item?.description?.map((desc, jindex) => (
+                    {item?.description?.map((desc: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined, jindex: Key | null | undefined) => (
                       <li key={jindex}>
                         {jindex === 0 && (
                           <MedicalIcon/>

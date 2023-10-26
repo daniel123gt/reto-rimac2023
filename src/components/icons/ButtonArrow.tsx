@@ -1,6 +1,5 @@
-import * as React from 'react'
 import { type SVGProps } from 'react'
-const ButtonArrow = (props: SVGProps<SVGSVGElement>) => (
+const ButtonArrow = (props: SVGProps<SVGSVGElement>): JSX.Element => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={24}
